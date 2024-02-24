@@ -1,10 +1,31 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./Mukta/Mukta-Bold.ttf') format('ttf'),
+      url('./Mukta/Mukta-Regular.ttf') format('ttf');
+    
+    font-style: normal;
+  }
+
+
+
 body {
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
     width: auto;
-    font-weight: 700;
+    font-family:  'MyFont', 'Arial';
     background: url('./icon.png');
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+}
+h1 {
+    font-size: 64px;
+    
 }
 
 header { 
@@ -16,6 +37,67 @@ header {
 
 nav {
     display: flex;
+    margin: 40px;
     justify-content: center;
     align-items: center;
+    gap: 30px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: Column;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.25;
+    margin-left: 22vh;
+    margin-right: 22vh;
+    margin-top: 25vh;
+    padding: 10px;
+    min-width: 58vh;
+    min-height: 43vh;
+
+}
+
+.center-container {
+    position: absolute;
+    display: flex;
+    flex-direction: Column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 22vh;
+    margin-right: 22vh;
+    min-width: 56vh;
+    min-height: 20vh;
+    
+
+}
+
+.center {
+
+    font-family: 'MyFont', 'Arial';
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    margin-left: 20vh;
+    margin-right: 20vh;
+    margin-top: 5vh;
+    padding: 10px;
+    min-width: 50vh;
+    max-width:60vh;
+    max-height: 40vh;
+    min-height: 25vh;
+    letter-spacing: .25rem;
+    line-height: 1.6;
+    
+
 }
