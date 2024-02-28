@@ -1,52 +1,30 @@
 import './style.css';
-import menu from './menu.js';
-import home from './home.js';
-import contact from './contact.js';
+import { menu } from './menu.js';
+import { home } from './home.js';
+import { contact } from './contact.js';
 
 console.log("index.js served!")
-let content = document.getElementById("content");
+const content = document.getElementById("content");
 
 
-function clearContent (element) {
-  while (element.firstElementChild) {
-    element.firstElementChild.remove()
-  }
-}
+const homeBtn = document.querySelector("#home");
+const menuBtn = document.querySelector("#menu");
+const aboutBtn = document.querySelector("#contact");
 
+home();
 
-function renderHome() {
-  clearContent(content)
+homeBtn.addEventListener("click", () => {
+  content.innerHTML ='';
   home();
+});
 
-}
-
-function renderMenu() {
-  clearContent(content)
-  menu();
-
-}
-
-function renderContact() {
-  clearContent(content)
+aboutBtn.addEventListener("click", () => {
+  content.innerHTML ='';
   contact();
+});
 
-}
-
-const homeNav = document.getElementById("nav-home");
-homeNav.addEventListener('click', ()=>{
-  renderHome();
-})
-
-const contactNav = document.getElementById("nav-contact");
-contactNav.addEventListener('click', ()=>{
-  renderContact();
-})
-
-const menuNav = document.getElementById("nav-menu");
-menuNav.addEventListener('click', ()=>{
-  renderMenu();
-})
-
-
-
+menuBtn.addEventListener("click", () => {
+  content.innerHTML ='';
+  menu();
+});
 

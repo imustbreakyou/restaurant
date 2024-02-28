@@ -2,10 +2,14 @@
 
 import './style.css';
 console.log("home.js served!")
-
-function renderHome() {
 let content = document.getElementById("content");
 console.log( {content} );
+
+export function home() {
+    console.log("home fired");
+
+
+
 
 // append container to content
 const container = document.createElement("div");
@@ -52,3 +56,4 @@ secondText.textContent = "Oak & Ember's dedication to local sourcing and seasona
 center.appendChild(secondText);
 
 }
+

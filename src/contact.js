@@ -3,9 +3,13 @@
 import './style.css';
 console.log("contact.js served!")
 
-function renderContact() {
+
   let content = document.getElementById("content");
   console.log( {content} );
+
+  export function contact() {
+    
+    console.log("contact fired");
 
   // append container to content
   const contactContainer = document.createElement("div");
@@ -71,5 +75,5 @@ function renderContact() {
   iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5844719783977!2d-73.9674781!3d40.749168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2591c5b5896d7%3A0x5b6f3d4edb00a068!2sUnited%20Nations%20Secretariat%20Building%2C%20405%20E%2042nd%20St%2C%20New%20York%2C%20NY%2010017!5e0!3m2!1sen!2sus!4v1709071700930!5m2!1sen!2sus';
   map.appendChild(iframe);
   
-  
-}
+  }
+

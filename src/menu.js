@@ -1,57 +1,77 @@
 import './style.css';
 console.log("menu.js served!")
 
-function renderMenu() {
+
 
 let content = document.getElementById("content");
 console.log({content});
+export function menu() {
+    console.log("menu fired");
 
-// append container to content
-const menuContainer = document.createElement("div");
-menuContainer.classList.add("menu-container"); // Assuming you intended to name it "menu-container"
-content.appendChild(menuContainer);
-console.log({menuContainer});
+  // append container to content
+  const contactContainer = document.createElement("div");
+  contactContainer.classList.add("contact-container");
+  content.appendChild(contactContainer);
+  console.log( {contactContainer} );
 
-// append menu to container
-const menu = document.createElement("div");
-menu.classList.add("menu-info"); // Corrected class name
-menuContainer.appendChild(menu);
-console.log({menu});
+  // append contact-info to container
+  const contactInfo = document.createElement("div");
+  contactInfo.classList.add("contact-info");
+  contactContainer.appendChild(contactInfo);
+  console.log( {contactInfo} );
 
-// Create and Append H1
-const menuTitle = document.createElement("h1");
-menuTitle.textContent = "Menu";
-menu.appendChild(menuTitle);
+  // append map to container
+  const map = document.createElement("div");
+  map.id = "map";
+  contactContainer.appendChild(map);
+  console.log( {map} );
 
-// Create and Append First Description Text
-const sevenCourse = document.createElement("h3");
-sevenCourse.textContent = "7 Course Prix Fixe"; // Corrected to set textContent
-menu.appendChild(sevenCourse);
 
-const sevenCoursePrice = document.createElement("h4");
-sevenCoursePrice.textContent = "$400.00";
-menu.appendChild(sevenCoursePrice);
 
-// Create and Append BR
-let space = document.createElement("br");
-menu.appendChild(space);
+   // Create and Append H1
 
-const fiveCourse = document.createElement("h3");
-fiveCourse.textContent = "5 Course Prix Fixe";
-menu.appendChild(fiveCourse);
+   const title = document.createElement("h1");
+   title.textContent = "menu";
+   contactInfo.appendChild(title);
 
-const fiveCoursePrice = document.createElement("h4");
-fiveCoursePrice.textContent = "$355.00";
-menu.appendChild(fiveCoursePrice);
+  // Create and Append First Description Text
+ 
+   const phone = document.createElement("h3");
+   phone.textContent = "Phone";
+   contactInfo.appendChild(phone);
 
-// Create and Append imageContainer to menuContainer
-const imageContainer = document.createElement("div");
-imageContainer.id = 'menu-image-container';
-menuContainer.appendChild(imageContainer);
+   const phoneNumber = document.createElement("h4");;
+   phoneNumber.textContent = "212-867-5309";
+   contactInfo.appendChild(phoneNumber);
 
-// Create and append menuImage to imageContainer
-const menuImage = document.createElement("div");
-menuImage.id = "menu-image";
-imageContainer.appendChild(menuImage);
+     // Create and Append BR
+  const space = document.createElement("br");
+  contactInfo.appendChild(space);
 
+   
+  const email = document.createElement("h3");
+  email.textContent = "Email";
+  contactInfo.appendChild(email);
+
+  const emailAddress = document.createElement("h4");;
+  emailAddress.textContent = "info@oakandember.com";
+  contactInfo.appendChild(emailAddress);
+
+
+  
+
+  // Create and Append googleMap to Map
+  const googleMap = document.createElement("div");
+  googleMap.id = 'googleMap';
+  map.appendChild(googleMap);
+  
+
+  // Create and iframe to googlMap to 
+  const iframe = document.createElement("iframe");
+  iframe.id = "iframe";
+  iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5844719783977!2d-73.9674781!3d40.749168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2591c5b5896d7%3A0x5b6f3d4edb00a068!2sUnited%20Nations%20Secretariat%20Building%2C%20405%20E%2042nd%20St%2C%20New%20York%2C%20NY%2010017!5e0!3m2!1sen!2sus!4v1709071700930!5m2!1sen!2sus';
+  map.appendChild(iframe);
+  
 }
+
+export default menu;

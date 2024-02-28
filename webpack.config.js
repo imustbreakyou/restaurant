@@ -5,17 +5,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index: path.join(__dirname, './src/index.js'),
-    menu: path.join(__dirname, './src/menu.js'),
-    contact: path.join(__dirname, './src/contact.js'),
-    home: path.join(__dirname, './src/home.js')
 },
   output: {
 
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: '[name].bundle.js',
   },
  
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin({
+    template: './src/index.html',
+    filename: 'index.html',
+    inject: 'body',
+  })],
   devtool: "inline-source-map",
   module: {
     rules: [
